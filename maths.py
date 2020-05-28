@@ -20,3 +20,15 @@ def Euler(c): # Calcula o número de Euler (e) pela série de Taylor
 	for n in range(0,10**c):
 		v += 1/math.factorial(n)
 	return v
+
+def sci(x): # conversor pra notação científica
+    e = 0
+    while x >= 10 or x < 1:
+        if x < 1:
+            x = x*10
+            e -= 1
+        elif x >= 10:
+            x = x/10
+            e += 1
+    return x,e  # formato: x*10^e
+
