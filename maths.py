@@ -32,3 +32,12 @@ def sci(x): # conversor pra notação científica
             e += 1
     return x,e  # formato: x*10^e
 
+def SnPA(a1,n,r): # Soma de 'n' termos de uma PA
+    an = a1+(n-1)*r
+    Sn = ((a1+an)*n)/2
+    return (an,Sn) # Retorna tupla
+
+def SnPG(a1,n,q): # Soma de 'n' termos de uma PG finita
+    an = a1*(q**(n-1))
+    Sn = (a1*((q**n)-1))/(q-1)
+    return (an,Sn) # Retorna tupla
